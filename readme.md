@@ -14,3 +14,4 @@ GKE
     * By default, use [GCP Logging](https://cloud.spring.io/spring-cloud-static/spring-cloud-gcp/1.2.3.RELEASE/reference/html/#stackdriver-logging), which outputs [Structured JSON logs](https://cloud.google.com/logging/docs/structured-logging).
         * Use the `local` Spring Boot Profile to have normal log output, e.g., `SPRING_PROFILES_ACTIVE=local ./gradlew bootRun`
     * Enable graceful shutdown and liveness/readiness probes in [Spring Boot 2.3](https://spring.io/blog/2020/03/25/liveness-and-readiness-probes-with-spring-boot)
+
