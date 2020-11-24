@@ -1,6 +1,6 @@
 steps:
   - name: 'adoptopenjdk:11-jdk-hotspot'
-    args: ['bash', '-c', './gradlew', 'bootJar']
+    args: ['./gradlew', 'bootJar']
     env:
       - 'GRADLE_OPTS="-Dorg.gradle.daemon=false"'
   - name: 'gcr.io/cloud-builders/docker'
