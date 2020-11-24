@@ -1,8 +1,10 @@
 steps:
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['fetch', '--depth=100']
   - name: 'adoptopenjdk:11-jdk-hotspot'
     args: ['./gradlew', 'bootJar']
     env:
       - 'GRADLE_OPTS="-Dorg.gradle.daemon=false"'
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/sag-resources-a696d780/github.com/joeyslalom/neowise', '.']
-images: ['gcr.io/sag-resources-a696d780/github.com/joeyslalom/neowise']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/github.com/joeyslalom/neowise:$COMMIT_SHA', '.']
+images: ['gcr.io/$PROJECT_ID/github.com/joeyslalom/neowise']
