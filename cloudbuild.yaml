@@ -5,4 +5,4 @@ steps:
       - 'GRADLE_OPTS="-Dorg.gradle.daemon=false"'
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/sag-resources-a696d780/github.com/joeyslalom/neowise', '.']
-    images: ['gcr.io/sag-resources-a696d780/github.com/joeyslalom/neowise']
+images: ['gcr.io/sag-resources-a696d780/github.com/joeyslalom/neowise']
